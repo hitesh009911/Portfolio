@@ -1,0 +1,213 @@
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, li {
+background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+     /* White background */
+    color: #000; /* Black text */
+}
+/* Add styles to hide the menu items by default */
+#menu-list {
+    display: none;
+    list-style: none;
+}
+
+/* Add styles to show the menu items when the menu is open */
+#menu-list.show-menu {
+    display: block;
+}
+
+/* Add styles to create a responsive menu bar */
+.menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.menu-bar.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-bar.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Global styles */
+header {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+}
+/* Add a class for expanding the logo */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+/* Style the profile section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.profile {
+    display: flex; /* Use flexbox to control spacing */
+    align-items: center;
+}
+
+.profile-image img {
+    width: 150px; /* Adjust the size of the profile image as needed */
+    height: 150px; /* Make the image square */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 20px; /* Add spacing between the image and text */
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 18px;
+}
+
+
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hero {
+    padding: 40px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.cta {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000; /* Black button background */
+    color: #fff; /* White button text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333; /* Darker background on hover */
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+}
+
+/* Add more styles for your projects, contact section, and footer as needed */
+/* Footer styles */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info, .social-media {
+    flex-basis: calc(50% - 20px);
+    text-align: left;
+}
+
+.contact-info h3, .social-media h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.social-media ul {
+	justify-content:center;
+    list-style: none;
+    padding: 0;
+}
+
+.social-media ul li {
+	justify-content:center;
+    margin-bottom: 10px;
+}
+
+.social-media a {
+	justify-content:center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 16px;
+}
+

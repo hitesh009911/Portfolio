@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="v.css"> <!-- Create a CSS file for page-specific styles -->
+    <title>Welcome Screen</title>
+</head>
+<body class="bg-black text-white font-sans">
+
+    <!-- Loading Animation Screen -->
+    <div id="loading-screen" class="w-screen h-screen flex justify-center items-center absolute top-0 left-0">
+        <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-200"></div>
+    </div>
+
+    <!-- Main Page Content (Initially hidden) -->
+    <div id="main-content" class="hidden">
+        <!-- Your main page content goes here -->
+    </div>
+
+    <!-- JavaScript Integration -->
+<!-- JavaScript Integration -->
+<script>
+    // Simulate a delay (e.g., 3 seconds) to show the loading animation
+    setTimeout(function() {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+        
+        // Redirect to the main page after the animation
+        window.location.href = 'n1.html'; // Replace 'main.html' with the actual filename of your main page
+    }, 1000); // Adjust the duration as needed
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* ... (previous styles) ... */
+
+        .left-arrow,
+        .right-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans flex justify-center items-center h-screen relative">
+    <a href="n1.html" class="back-arrow">←</a>
+    <div class="project">
+        <!-- ... (previous project items) ... -->
+    </div>
+
+    <div class="left-arrow" onclick="scrollProjects('left')">←</div>
+    <div class="right-arrow" onclick="scrollProjects('right')">→</div>
+
+    <script>
+        function scrollProjects(direction) {
+            const projects = document.querySelector('.project');
+            const projectItems = projects.querySelectorAll('.project-item');
+
+            const windowWidth = window.innerWidth;
+            const itemWidth = projectItems[0].offsetWidth + 20; // Considering 20px gap
+
+            if (direction === 'left') {
+                projects.scrollLeft -= windowWidth;
+            } else if (direction === 'right') {
+                projects.scrollLeft += windowWidth;
+            }
+        }
+    </script>
+</body>
+</html>

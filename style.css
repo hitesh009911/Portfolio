@@ -1,0 +1,54 @@
+ .back-arrow {
+            font-size: 2rem;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+.zigzag-pattern {
+    display: flex;
+    justify-content: center;
+}
+
+.zigzag-sign {
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-icon {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.zigzag-sign:hover {
+    transform: scale(1.1);
+}
+
+#html-section,
+#css-section,
+#js-section,
+#Python-section,
+#react-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #fff; 
+    border-radius: 10px;
+}
+.star-rating {
+    font-size: 1.5rem;
+    color: #fcd34d; /* Adjust the color as needed */
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+body {
+    overflow: hidden;
+}

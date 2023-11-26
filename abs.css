@@ -1,0 +1,15 @@
+/* styles.css */
+@keyframes slideInTopToBottom {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animated-top-to-bottom {
+    animation: slideInTopToBottom 1s ease-in-out;
+}
