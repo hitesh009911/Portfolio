@@ -1,53 +1,77 @@
-.project {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
+/* style.css */
 
-        .project-item {
-            position: relative;
-            background-color: black;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin */
+}
 
-        .project-item:hover::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #fff;
-            opacity: 0.1;
-            transition: opacity 0.3s;
-        }
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .project-item:hover {
-            transform: scale(1.05);
-        }
+.project-item {
+    display: flex;
+    width: 150%;
+    margin: 20px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
 
-        .project-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.project-item:hover {
+    transform: scale(1.05);
+}
 
-        .project-info {
-            padding: 10px;
-        }
+.project-img {
+    width: 300px; /* Adjust the size as needed */
+    height: 170px;
+    object-fit: cover;
+}
 
-        .back-arrow {
-            font-size: 2rem;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: white; 
-            cursor: pointer;
-            z-index: 1; 
-        }
- 
+.project-info {
+    flex: 1;
+    padding: 40px;
+}
+
+.project-info h3 {
+    font-size: 1.5rem; /* Adjust the font size for project names */
+}
+
+.project-info p {
+    font-size: 1rem; /* Adjust the font size for project descriptions */
+}
+
+.back-arrow {
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .project-item {
+        width: 90%; /* Adjust the width for smaller screens */
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem; /* Adjust the font size for project names on smaller screens */
+    }
+
+    .project-info p {
+        font-size: 0.9rem; /* Adjust the font size for project descriptions on smaller screens */
+    }
+}
